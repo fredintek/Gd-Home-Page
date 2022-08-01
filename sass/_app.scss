@@ -1,0 +1,59 @@
+.app {
+  &__heading {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+    color: $color-navy-blue;
+    margin-bottom: 1rem;
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $color-navy-blue;
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    &-btn {
+      display: inline-block;
+      background-color: $color-black;
+      padding: 1.6rem 4rem;
+      flex-grow: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      p {
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #ffffff;
+
+        @media only screen and(max-width:37.5em) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

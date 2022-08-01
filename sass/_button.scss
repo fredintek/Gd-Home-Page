@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: $border-radius-nm;
+}
+
+.btn-dark {
+  background-color: $color-navy-blue;
+}
+
+.btn-light {
+  background-color: $color-orange;
+}

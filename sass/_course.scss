@@ -1,0 +1,128 @@
+.course {
+  &-container {
+    position: relative;
+  }
+
+  &__heading {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 5rem;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 3rem;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $color-white;
+    right: 2%;
+    bottom: -15%;
+
+    @media only screen and(max-width:75em) {
+      bottom: -7.5%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+
+    @media only screen and(max-width:75em) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    position: relative;
+    background-color: #fff;
+    border-radius: $border-radius-nm;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and(max-width:75em) {
+      width: 100%;
+    }
+
+    @media only screen and(max-width:37.5em) {
+      padding: 0 2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.8rem;
+      width: 90%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-navy-blue;
+      border-radius: $border-radius-nm;
+    }
+  }
+
+  &__img {
+    width: 80%;
+    height: 60%;
+    // border-top-right-radius: $border-radius-nm;
+    // border-top-left-radius: $border-radius-nm;
+    // overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 2.6rem;
+
+    color: $color-navy-blue;
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 2rem;
+    }
+  }
+
+  &__duration {
+    color: $color-navy-blue;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-icon {
+      margin-right: 0.4rem;
+    }
+  }
+}

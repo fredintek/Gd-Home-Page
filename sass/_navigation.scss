@@ -1,0 +1,57 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 114rem;
+  z-index: 100;
+  padding: 2rem 1rem 1rem 1rem;
+  transition: all 300ms ease-in;
+
+  @media only screen and(max-width:75em) {
+    width: 100%;
+    right: 0;
+    left: 0;
+    padding: 2rem 10rem;
+  }
+
+  @media only screen and(max-width:56.25em) {
+    display: none;
+  }
+
+  &__logo {
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 4rem;
+    color: $color-white;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $color-white;
+  }
+}
+
+.navigation.bg {
+  background-color: $color-navy-blue;
+  opacity: 0.9;
+
+  @media only screen and(max-width:75em) {
+    width: 100%;
+  }
+
+  & .nav-btn {
+    background-color: $color-orange;
+  }
+}

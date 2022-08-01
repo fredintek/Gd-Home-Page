@@ -1,0 +1,181 @@
+.testimonials {
+  display: flex;
+  gap: 6rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  // width: 100%;
+
+  @media only screen and(max-width:75em) {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    transform: translateX(-50%);
+
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #ffffff;
+
+    @media only screen and(max-width:75em) {
+      bottom: 0;
+      right: 0;
+    }
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0.9rem 3.6rem rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius-nm;
+
+    @media only screen and(max-width:75em) {
+      width: 100%;
+
+      &:not(:first-of-type) {
+        margin-bottom: 8rem;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 5.5rem;
+    }
+
+    &:last-of-type {
+      transform: translateX(2rem);
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 2.8rem;
+      height: 2rem;
+      background-color: $color-navy-blue;
+      top: -2rem;
+      left: 5rem;
+    }
+  }
+
+  &__content {
+    padding: 2.4rem 3.2rem;
+    color: #fff;
+    background-color: $color-dark-blue;
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 1.6rem;
+    border-radius: $border-radius-nm;
+
+    @media only screen and(max-width:37.5em) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 12rem;
+    background-color: #fff;
+  }
+
+  &__description {
+    margin-left: 3.2rem;
+    & h3 {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: $color-navy-blue;
+
+      @media only screen and(max-width:37.5em) {
+        font-size: 2rem;
+      }
+    }
+
+    & p {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: $color-navy-blue;
+
+      @media only screen and(max-width:37.5em) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 2rem;
+    top: -2rem;
+
+    & img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__right {
+    @media only screen and(max-width:75em) {
+      order: -1;
+    }
+
+    &-heading {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 5rem;
+      color: $color-navy-blue;
+
+      @media only screen and(max-width:37.5em) {
+        font-size: 3rem;
+      }
+    }
+
+    &-text {
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: $color-navy-blue;
+      width: 90%;
+
+      @media only screen and(max-width:37.5em) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.card-2 .testimonials__content {
+  background-color: $color-orange;
+}
+
+.card-1::before {
+  border-top-left-radius: $border-radius-md;
+  border-top-right-radius: $border-radius-md;
+}
+
+.card-2::before {
+  z-index: -1;
+  top: -5.5rem;
+  left: 3rem;
+  height: 27rem;
+  border-bottom-left-radius: $border-radius-md;
+  border-bottom-right-radius: $border-radius-md;
+}

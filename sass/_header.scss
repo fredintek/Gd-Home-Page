@@ -1,0 +1,11 @@
+.header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header.mobile-active {
+  & .nav__mobile-list {
+    transform: translateY(0);
+  }
+}
